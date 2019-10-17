@@ -25,6 +25,7 @@ var canvas = document.getElementById('canvas');
     canvas.style.visibility="visible"
     //autoplayを外し、playを入れたらcanvasに描がかれた
     document.getElementById('plane').play();
+    document.getElementById('video').play();
 
 var context = canvas.getContext('2d');
 
