@@ -5,17 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
 <style>
 
-      #output
-      {
-        left:0px;
-        position:fixed;
-        width: 1280px;
-        height: 720px;
-        z-index:3;
-      }
+
       #bgvideo
       {
         left:0px;
+        top:0px;
         position:fixed;
         width: 1280px;
         height: 720px;
@@ -37,10 +31,10 @@
 <video  muted playsinline id="bgvideo"></video>
 
 <!--//元素材-->
-<canvas style="visibility: hidden;" id="buffer"></canvas>
+<canvas style="display:none" id="buffer"></canvas>
 
 <!--//buffer canvas uses this video to extract data-->
-<video class="" id="video" muted playsinline style="visibility: hidden;">
+<video class="" id="video" muted playsinline style="display:none">
     <source src="./plane.mp4"  /></video>
     <!--type='video/mp4;codecs="avc1.42E01E"'-->
 
