@@ -5,7 +5,7 @@ var height=480;
 
 
 function draw() {
-    buffer.drawImage(video, 0, 0);
+    document.getElementById("buffer").drawImage(video, 0, 0);
 
     //Get alphadata
     var image = buffer.getImageData(0, 0, width, height);
@@ -21,7 +21,7 @@ function draw() {
     }
 
     //Output to second canvas
-    output.putImageData(image, 0, 0, 0, 0, width, height);
+    document.getElementById("output").putImageData(image, 0, 0, 0, 0, width, height);
     requestAnimationFrame(draw)
 }
 
