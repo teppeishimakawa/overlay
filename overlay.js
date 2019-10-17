@@ -8,10 +8,10 @@ var hei=window.innerHeight;
 
 var rectX=0;
 var rectY=0;
-var rectWid=1280;
-var rectHei=720;
+var rectWid=300;
+var rectHei=300;
 
-var seido=16;
+var seido=4;
 
 
 
