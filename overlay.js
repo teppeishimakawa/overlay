@@ -15,7 +15,7 @@ function draw() {
 
     //Loop through pixels, replace data with alpha channel
     //映像のアルファはアルファ動画のbチャンネルの値で決める。（白黒なのでr=g=bだから）
-    for (i = 3, i < imageData.length; i += 4)
+    for (i = 3; i < imageData.length; i += 4)
     {
         imageData[i] = alphaData[i-1];
     }
