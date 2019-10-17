@@ -38,7 +38,7 @@ const medias =
   audio: false,
   video: {
     facingMode: "environment",
-    aspectRatio: {exact: 1.7777777778}
+    //aspectRatio: {exact: 1.7777777778}
     //facingMode: "user" // フロントカメラにアクセス
   }
 };
