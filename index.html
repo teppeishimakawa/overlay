@@ -13,14 +13,15 @@
 
 <body>
 
+
+<!--Output canvas (combines mask with video)-->
+<canvas class="video__output " width="1280" height="720" id="output"></canvas>
+
 <!--背景動画-->
 <video width="1280" height="720"  muted playsinline id="bgvideo"></video>
 
 <!--//元素材-->
 <canvas style="display:none" width="1280" height="1440" id="buffer"></canvas>
-
-<!--Output canvas (combines mask with video)-->
-<canvas class="video__output " width="1280" height="720" id="output"></canvas>
 
 <!--//buffer canvas uses this video to extract data-->
 <video class="" id="video" muted playsinline style="display:none" >
