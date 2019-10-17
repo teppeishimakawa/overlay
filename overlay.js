@@ -138,7 +138,7 @@ function errorCallback(err) {
               }
 
         　 }
-context.putImageData(imageData,xx,yy);
+context.putImageData(imageData,0,0);
 
 
     }
