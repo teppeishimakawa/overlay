@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
 <style>
 
+      #group
+      {
+        position:fixed;
+      }
+
       #output
       {
         left:0px;
@@ -32,14 +37,14 @@
 
 <!--背景動画-->
 <video width="1280" height="720"  muted playsinline id="bgvideo"></video>
-
+</div>
 <!--//元素材-->
 <canvas style="display:none" width="1280" height="1440" id="buffer"></canvas>
 
 <!--//buffer canvas uses this video to extract data-->
 <video width="1280" height="720" id="video" muted playsinline style="display:none" src="./plane.mp4" ></video>
     <!--type='video/mp4;codecs="avc1.42E01E"'-->
-</div>
+
 
 
 
