@@ -23,8 +23,7 @@ var canvas = document.getElementById('canvas');
 var canvas_alpha = document.getElementById('canvas_alpha');
     canvas_alpha.width=wid;
     canvas_alpha.height=hei;
-    // そのまま表示すると鏡像にならないので反転させておく
-    //canvas.style.transform = 'rotateY(180deg)';
+
     document.getElementById("video").style.visibility="visible"
     document.getElementById("plane").style.visibility="hidden"
     document.getElementById("plane_alpha").style.visibility="hidden"
