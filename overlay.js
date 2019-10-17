@@ -1,7 +1,7 @@
 
 
-var width=1280;
-var height=720;
+var width=window.innerWidth;
+var height=window.innerHeight;
 var buffer=document.getElementById("buffer").getContext('2d');
 
 document.getElementById("video").play();
