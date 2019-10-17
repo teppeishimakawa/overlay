@@ -26,10 +26,10 @@ var canvas_alpha = document.getElementById('canvas_alpha');
     // そのまま表示すると鏡像にならないので反転させておく
     //canvas.style.transform = 'rotateY(180deg)';
     document.getElementById("video").style.visibility="visible"
-    document.getElementById("plane").style.display="none"
-    document.getElementById("plane_alpha").style.display="none"
+    document.getElementById("plane").style.visibility="hidden"
+    document.getElementById("plane_alpha").style.visibility="hidden"
     canvas.style.visibility="visible"
-    canvas_alpha.style.display="none"
+    canvas_alpha.style.visibility="visible"
     //autoplayを外し、playを入れたらcanvasに描がかれた
     document.getElementById('plane').play();
     document.getElementById('plane_alpha').play();
@@ -128,7 +128,7 @@ function errorCallback(err) {
                 //console.log(target);
                 //console.log(back.r);
             //blackは消す
-            if (target.r)
+            if (back.r  < 5)
               {
               data[i + 3] = 0;
               }
