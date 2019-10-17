@@ -21,6 +21,7 @@ var canvas = document.getElementById('canvas');
     // そのまま表示すると鏡像にならないので反転させておく
     //canvas.style.transform = 'rotateY(180deg)';
     video.style.visibility="visible"
+    plane.style.visibility="hidden"
     canvas.style.visibility="visible"
     //autoplayを外し、playを入れたらcanvasに描がかれた
     document.getElementById('plane').play();
@@ -79,7 +80,7 @@ function errorCallback(err) {
     function draw()
     {
         context.clearRect(0, 0, wid, hei);
-        context.drawImage(over,rectX,rectY,rectWid,rectHei,rectX,rectY,rectWid,rectHei);
+        context.drawImage(plane,rectX,rectY,rectWid,rectHei,rectX,rectY,rectWid,rectHei);
         detect();
         requestAnimationFrame(draw);
     };
