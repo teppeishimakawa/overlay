@@ -1,41 +1,33 @@
 
-//var colorDistance=10;
-//var seido=4;
+
+var width=854;
+var height=480;
 
 
-var wid=window.innerWidth;
-var hei=window.innerHeight;
+function draw() {
+    buffer.drawImage(video, 0, 0);
 
-var rectX=0;
-var rectY=0;
-var rectWid=1280;
-var rectHei=720;
+    //Get alphadata
+    var image = buffer.getImageData(0, 0, width, height);
+    var imageData = image.data;
+    var alphaData = buffer.getImageData(0, 0, width, height).data;
+    //var alphaData = buffer.getImageData(0, height, width, height).data;
 
-var seido=32;
+    //Loop through pixels, replace data with alpha channel
+    //映像のアルファはアルファ動画のbチャンネルの値で決める。（白黒なのでr=g=bだから）
+    for (i = 3, i < imageData.length; i += 4)
+    {
+        imageData[i] = alphaData[i-1];
+    }
+
+    //Output to second canvas
+    output.putImageData(image, 0, 0, 0, 0, width, height);
+    requestAnimationFrame(draw)
+}
 
 
+draw();
 
-
-//input video
-var canvas = document.getElementById('canvas');
-    canvas.width=wid;
-    canvas.height=hei;
-var canvas_alpha = document.getElementById('canvas_alpha');
-    canvas_alpha.width=wid;
-    canvas_alpha.height=hei;
-
-    document.getElementById("video").style.visibility="visible"
-    document.getElementById("plane").style.visibility="hidden"
-    document.getElementById("plane_alpha").style.visibility="hidden"
-    canvas.style.visibility="visible"
-    canvas_alpha.style.visibility="visible"
-    //autoplayを外し、playを入れたらcanvasに描がかれた
-    document.getElementById('plane').play();
-    document.getElementById('plane_alpha').play();
-    document.getElementById('video').play();
-
-var context = canvas.getContext('2d');
-var context_alpha = canvas_alpha.getContext('2d');
 
 
 const medias =
@@ -71,8 +63,7 @@ promise.then(successCallback)
 
 
 function successCallback(stream) {
-  video.srcObject = stream;
-  draw();
+  bgvideo.srcObject = stream;
  };
 
 function errorCallback(err) {
@@ -83,73 +74,4 @@ function errorCallback(err) {
 {
 
 }
-
-    // planeの映像をcanvasに描画する
-    function draw()
-    {
-        context.clearRect(0, 0, wid, hei);
-        context.drawImage(plane,rectX,rectY,rectWid,rectHei,rectX,rectY,rectWid,rectHei);
-        context_alpha.clearRect(0, 0, wid, hei);
-        context_alpha.drawImage(plane_alpha,rectX,rectY,rectWid,rectHei,rectX,rectY,rectWid,rectHei);
-        detect();
-        requestAnimationFrame(draw);
-    };
-
-
-    // 検出処理
-    function detect()
-    {
-        var imageData = context.getImageData(rectX,rectY,rectWid,rectHei);
-        var data = imageData.data;
-        var imageData2 = context_alpha.getImageData(rectX,rectY,rectWid,rectHei);
-        var data2 = imageData2.data;
-        // dataはUint8ClampedArray
-        // 長さはcanvasの width * height * 4(r,g,b,a)
-        // 先頭から、一番左上のピクセルのr,g,b,aの値が順に入っており、
-        // 右隣のピクセルのr,g,b,aの値が続く
-        // n から n+4 までが1つのピクセルの情報となる
-
-
-        for (var i=0; i < data.length; i += seido)
-         　{
-            var target =
-            　　{
-                    r: data[i],
-                    g: data[i + 1],
-                    b: data[i + 2]
-                };
-            var back =
-            　　{
-                    r: data2[i],
-                    g: data2[i + 1],
-                    b: data2[i + 2]
-                };
-                //console.log(target);
-                //console.log(back.r);
-            //blackは消す
-            if (back.r  < 5)
-              {
-              data[i + 3] = 0;
-              }
-            else
-              {
-              return false;
-              }
-
-        　 }
-context.putImageData(imageData,0,0);
-
-
-    }
-
-
-//  && back.g < 5 && back.b < 5
-
-
-
-
-
-
-
-
 

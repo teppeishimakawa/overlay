@@ -6,35 +6,6 @@
       <style>
 
 
-      #canvas
-      {
-        left:0px;
-        position:fixed;
-        width: 1280px;
-        height: 720px;
-        z-index:3
-      }
-
-      #video
-      {
-        left:0px;
-        position:fixed;
-        width: 1280px;
-        height: 720px;
-        z-index:2
-      }
-
-      #canvas_alpha
-      {
-        left:0px;
-        position:fixed;
-        width: 1280px;
-        height: 720px;
-        z-index:1
-      }
-
-
-
     </style>
 
  <title>overlay</title>
@@ -42,13 +13,19 @@
 
 <body>
 
-    <div id="bg">
-      <canvas id="canvas" class="pos"></canvas>
-      <video muted playsinline id="video" class="pos"></video>
-      <video muted playsinline id="plane" src="./plane.mp4"></video>
-      <video muted playsinline id="plane_alpha" src="./plane_alpha.mp4"></video>
-      <canvas id="canvas_alpha"></canvas>
-    </div>
+<!--//元素材-->
+<canvas style="display:none" width="1280" height="1440" id="buffer"></canvas>
+
+<!--Output canvas (combines mask with video)-->
+<canvas class="video__output " width="1280" height="720" id="output"></canvas>
+
+<!--//buffer canvas uses this video to extract data-->
+<video class="" id="video" muted playsinline style="display:none" >
+    <source src="./plane.mp4"  /></video>
+    <!--type='video/mp4;codecs="avc1.42E01E"'-->
+
+<!--背景動画-->
+<video width="1280" height="720" class="video--top loop" muted playsinline id="bgvideo"></video>
 
 
 <script type="text/javascript" src="./overlay.js"></script>
