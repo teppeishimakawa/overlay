@@ -86,13 +86,13 @@ function errorCallback(err) {
         context.drawImage(plane,rectX,rectY,rectWid,rectHei,rectX,rectY,rectWid,rectHei);
         detect();
         requestAnimationFrame(draw);
-        console.log("draw");
     };
 
 
     // 検出処理
     function detect()
     {
+        console.log("detect");
         var imageData = context.getImageData(rectX,rectY,rectWid,rectHei);
         data = imageData.data;
         // dataはUint8ClampedArray
