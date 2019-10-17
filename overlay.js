@@ -21,7 +21,7 @@ function draw() {
     }
 
     //Output to second canvas
-    document.getElementById("output").putImageData(image, 0, 0, 0, 0, width, height);
+    document.getElementById("output")getContext("2d").putImageData(image, 0, 0, 0, 0, width, height);
     requestAnimationFrame(draw)
 }
 
