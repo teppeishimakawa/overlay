@@ -128,7 +128,7 @@ function errorCallback(err) {
                 //console.log(target);
                 //console.log(back.r);
             //blackは消す
-            if (target.r  < 5 )
+            if (getColorDistance(back) < 10)
               {
               data[i + 3] = 0;
               }
@@ -142,6 +142,18 @@ context.putImageData(imageData,0,0);
 
 
     }
+
+
+        // r,g,bというkeyを持ったobjectが第一引数と第二引数に渡される想定
+    var getColorDistance = function (rgbback)
+    {
+        // 三次元空間の距離が返る
+        return (
+            (rgbback.r) +
+            (rgbback.g) +
+            (rgbback.b)
+        );
+    };
 
 
 
