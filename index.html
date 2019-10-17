@@ -17,6 +17,10 @@
         position:fixed;
         z-index:1;
       }
+      #group
+      {
+      margin:  0 auto;
+      }
 
 </style>
 
@@ -25,7 +29,7 @@
 
 <body>
 
-
+<div id="group">
 <!--Output canvas (combines mask with video)-->
 <canvas class="video__output " width="1280" height="720" id="output"></canvas>
 
@@ -39,7 +43,7 @@
 <video class="" id="video" muted playsinline style="display:none">
     <source src="./plane.mp4"  /></video>
     <!--type='video/mp4;codecs="avc1.42E01E"'-->
-
+</div>
 
 
 
