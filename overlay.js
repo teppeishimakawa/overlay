@@ -86,6 +86,7 @@ function errorCallback(err) {
         context.drawImage(plane,rectX,rectY,rectWid,rectHei,rectX,rectY,rectWid,rectHei);
         detect();
         requestAnimationFrame(draw);
+        console.log("draw");
     };
 
 
@@ -125,6 +126,7 @@ function errorCallback(err) {
               {
               return;
               }
+              console.log("detect");
         　 }
 
 console.log(target);
