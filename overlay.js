@@ -21,7 +21,7 @@ var canvas = document.getElementById('canvas');
     // そのまま表示すると鏡像にならないので反転させておく
     //canvas.style.transform = 'rotateY(180deg)';
     video.style.visibility="visible"
-    plane.style.visibility="hidden"
+    plane.style.display="none"
     canvas.style.visibility="visible"
     //autoplayを外し、playを入れたらcanvasに描がかれた
     document.getElementById('plane').play();
