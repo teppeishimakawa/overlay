@@ -2,7 +2,7 @@
 
 var width=854;
 var height=480;
-var buffer=buffer.getContext('2d');
+var buffer=document.getElementById("buffer").getContext('2d');
 
 function draw() {
     buffer.drawImage(video, 0, 0);
