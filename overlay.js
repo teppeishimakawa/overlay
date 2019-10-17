@@ -28,7 +28,7 @@ var canvas_alpha = document.getElementById('canvas_alpha');
     document.getElementById("video").style.visibility="visible"
     document.getElementById("plane").style.display="none"
     document.getElementById("plane_alpha").style.display="none"
-    canvas.style.visibility="visible"
+    canvas.style.visibility="hidden"
     canvas_alpha.style.display="none"
     //autoplayを外し、playを入れたらcanvasに描がかれた
     document.getElementById('plane').play();
@@ -128,7 +128,7 @@ function errorCallback(err) {
                 //console.log(target);
                 //console.log(back.r);
             //blackは消す
-            if (back.r  < 5 )
+            if (back.r  < 5 && back.g < 5 && back.b < 5)
               {
               data[i + 3] = 0;
               }
