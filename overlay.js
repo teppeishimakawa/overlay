@@ -1,6 +1,6 @@
 
 
-var width=800;
+var width=1280;
 var height=720;
 var buffer=document.getElementById("buffer").getContext('2d');
 
