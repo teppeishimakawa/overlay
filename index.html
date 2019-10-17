@@ -9,16 +9,12 @@
       {
         left:0px;
         position:fixed;
-        width: 1280px;
-        height: 720px;
         z-index:2;
       }
       #bgvideo
       {
         left:0px;
         position:fixed;
-        width: 1280px;
-        height: 720px;
         z-index:1;
       }
 
@@ -31,10 +27,10 @@
 
 
 <!--Output canvas (combines mask with video)-->
-<canvas class="video__output" id="output"></canvas>
+<canvas class="video__output " width="1280" height="720" id="output"></canvas>
 
 <!--背景動画-->
-<video  muted playsinline id="bgvideo"></video>
+<video width="1280" height="720"  muted playsinline id="bgvideo"></video>
 
 <!--//元素材-->
 <canvas style="display:none" width="1280" height="1440" id="buffer"></canvas>
