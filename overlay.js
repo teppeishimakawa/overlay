@@ -22,8 +22,8 @@ var canvas = document.getElementById('canvas');
     canvas.height=hei;
     // そのまま表示すると鏡像にならないので反転させておく
     //canvas.style.transform = 'rotateY(180deg)';
-    video.style.visibility="visible"
-    plane.style.display="none"
+    document.getElementById("video").style.visibility="visible"
+    document.getElementById("plane").style.display="none"
     canvas.style.visibility="visible"
     //autoplayを外し、playを入れたらcanvasに描がかれた
     document.getElementById('plane').play();
@@ -127,7 +127,10 @@ function errorCallback(err) {
               }
         　 }
 
-         }
+console.log(target);
+
+
+    }
 
 
 
