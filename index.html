@@ -11,7 +11,7 @@
         position:fixed;
         width: 1280px;
         height: 720px;
-        z-index:2;
+        z-index:3;
       }
       #bgvideo
       {
@@ -19,6 +19,22 @@
         position:fixed;
         width: 1280px;
         height: 720px;
+        z-index:2;
+      }
+      #buffer
+      {
+        left:0px;
+        position:fixed;
+        width: 1280px;
+        height:1440px;
+        z-index:1;
+      }
+      #video
+      {
+        left:0px;
+        position:fixed;
+        width: 1280px;
+        height:720px;
         z-index:1;
       }
 
@@ -37,7 +53,7 @@
 <video  muted playsinline id="bgvideo"></video>
 
 <!--//元素材-->
-<canvas style="display:none" width="1280" height="1440" id="buffer"></canvas>
+<canvas style="display:none" id="buffer"></canvas>
 
 <!--//buffer canvas uses this video to extract data-->
 <video class="" id="video" muted playsinline style="display:none">
