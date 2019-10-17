@@ -2,10 +2,10 @@
 
 var width=854;
 var height=480;
-
+var buffer=buffer.getContext('2d');
 
 function draw() {
-    document.getElementById("buffer").drawImage(video, 0, 0);
+    .drawImage(video, 0, 0);
 
     //Get alphadata
     var image = buffer.getImageData(0, 0, width, height);
