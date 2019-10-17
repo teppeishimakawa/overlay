@@ -128,7 +128,7 @@ function errorCallback(err) {
                 //console.log(target);
                 //console.log(back.r);
             //blackは消す
-            if (parseInt(back.r)  < 5)
+            if (data2[i]  < 5)
               {
               data[i + 3] = 0;
               }
