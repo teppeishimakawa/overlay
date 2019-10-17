@@ -4,6 +4,9 @@ var width=854;
 var height=480;
 var buffer=document.getElementById("buffer").getContext('2d');
 
+document.getElementById("video").play();
+document.getElementById("bgvideo").play();
+
 function draw() {
     buffer.drawImage(video, 0, 0);
 
