@@ -125,8 +125,8 @@ function errorCallback(err) {
                     g: data2[i + 1],
                     b: data2[i + 2]
                 };
-                console.log(target);
-                console.log(back);
+                //console.log(target);
+                //console.log(back);
             //blackは消す
             if (back.r  < 5 && back.g < 5 && back.b < 5)
               {
