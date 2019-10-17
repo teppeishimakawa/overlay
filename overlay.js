@@ -5,7 +5,7 @@ var height=480;
 var buffer=buffer.getContext('2d');
 
 function draw() {
-    .drawImage(video, 0, 0);
+    buffer.drawImage(video, 0, 0);
 
     //Get alphadata
     var image = buffer.getImageData(0, 0, width, height);
