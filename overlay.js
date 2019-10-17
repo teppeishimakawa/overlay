@@ -4,7 +4,7 @@
 
     //autoplayを外し、playを入れたらcanvasに描がかれた
     document.getElementById('video').play();
-
+    document.getElementById('over').play();
 
 const medias =
 {
