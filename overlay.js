@@ -92,7 +92,6 @@ function errorCallback(err) {
     // 検出処理
     function detect()
     {
-        console.log("detect");
         var imageData = context.getImageData(rectX,rectY,rectWid,rectHei);
         data = imageData.data;
         // dataはUint8ClampedArray
@@ -116,7 +115,7 @@ function errorCallback(err) {
                     g: 0,
                     b: 0
                 };
-
+            console.log("detect");
             //blackは消す
             if (target == black)
               {
@@ -126,7 +125,7 @@ function errorCallback(err) {
               {
               return;
               }
-              console.log("detect");
+
         　 }
 
 console.log(target);
