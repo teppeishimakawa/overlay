@@ -128,7 +128,7 @@ function errorCallback(err) {
                 //console.log(target);
                 //console.log(back.r);
             //blackは消す
-            if (back.r  < 5 && back.g < 5 && back.b < 5)
+            if (target.r  < 5)
               {
               data[i + 3] = 0;
               }
@@ -144,6 +144,7 @@ context.putImageData(imageData,0,0);
     }
 
 
+//  && back.g < 5 && back.b < 5
 
 
 
