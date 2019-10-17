@@ -125,6 +125,8 @@ function errorCallback(err) {
                     g: data2[i + 1],
                     b: data2[i + 2]
                 };
+                console.log(target);
+                console.log(back);
             //blackは消す
             if (back.r  == 0 && back.g == 0 && back.b == 0)
               {
@@ -137,7 +139,7 @@ function errorCallback(err) {
 
         　 }
 context.putImageData(imageData,xx,yy);
-console.log(target);
+
 
     }
 
