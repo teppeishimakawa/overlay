@@ -3,8 +3,8 @@
 //var seido=4;
 
 
-var wid=window.innerWidth;
-var hei=window.innerHeight;
+var wid=1280;
+var hei=720;
 
 var rectX=0;
 var rectY=0;
@@ -101,9 +101,9 @@ function errorCallback(err) {
     function detect()
     {
         var imageData = context.getImageData(rectX,rectY,rectWid,rectHei);
-        data = imageData.data;
+        var data = imageData.data;
         var imageData2 = context_alpha.getImageData(rectX,rectY,rectWid,rectHei);
-        data2 = imageData2.data;
+        var data2 = imageData2.data;
         // dataはUint8ClampedArray
         // 長さはcanvasの width * height * 4(r,g,b,a)
         // 先頭から、一番左上のピクセルのr,g,b,aの値が順に入っており、
