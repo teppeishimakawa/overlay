@@ -128,7 +128,7 @@ function errorCallback(err) {
                 console.log(target);
                 console.log(back);
             //blackは消す
-            if (back.r  == 0 && back.g == 0 && back.b == 0)
+            if (back.r  < 5 && back.g < 5 && back.b < 5)
               {
               data[i + 3] = 0;
               }
