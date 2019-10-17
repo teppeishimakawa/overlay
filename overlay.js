@@ -3,8 +3,8 @@
 //var seido=4;
 
 
-var wid=1280;
-var hei=720;
+var wid=window.innerWidth;
+var hei=window.innerHeight;
 
 var rectX=0;
 var rectY=0;
