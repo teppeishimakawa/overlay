@@ -131,6 +131,7 @@ function errorCallback(err) {
             if (back.r  < 5 && back.g < 5 && back.b < 5)
               {
               data[i + 3] = 0;
+              console.log(back.r);
               }
             else
               {
