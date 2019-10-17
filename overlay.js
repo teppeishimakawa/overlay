@@ -11,7 +11,7 @@ var rectY=0;
 var rectWid=1280;
 var rectHei=720;
 
-var seido=4;
+var seido=32;
 
 
 
@@ -126,16 +126,16 @@ function errorCallback(err) {
                     b: data2[i + 2]
                 };
                 //console.log(target);
-                //console.log(back);
+                console.log(back.r);
             //blackは消す
-          //  if (back.r  < 5 && back.g < 5 && back.b < 5)
-          //    {
+            if (back.r  < 5 && back.g < 5 && back.b < 5)
+              {
               data[i + 3] = 0;
-          //    }
-          //  else
-          //    {
-          //    return;
-          //    }
+              }
+            else
+              {
+              return;
+              }
 
         　 }
 context.putImageData(imageData,0,0);
