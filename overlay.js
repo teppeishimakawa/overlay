@@ -11,6 +11,8 @@ var rectY=0;
 var rectWid=1280;
 var rectHei=720;
 
+var seido=8;
+
 
 
 
