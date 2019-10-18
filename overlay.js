@@ -5,7 +5,7 @@ var height=window.innerHeight;
 var buffer=document.getElementById("buffer").getContext('2d');
 
 document.getElementById("video").play();
-document.getElementById("bgvideo").play();
+//document.getElementById("bgvideo").play();
 
 function draw() {
     buffer.drawImage(video, 0, 0);
