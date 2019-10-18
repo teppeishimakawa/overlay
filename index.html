@@ -8,10 +8,21 @@
       #group
       {
         left:0px;
-        position:fixed;
+        position:relative;
         z-index:1;
       }
-
+      #ov
+      {
+        width: 300px;
+        height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+        z-index:2;
+      }
       #output
       {
         left:0px;
@@ -35,18 +46,20 @@
 
 <div id="group">
 <!--Output canvas (combines mask with video)-->
+<div id="ov">
 <canvas class="video__output " width="300" height="500" id="output"></canvas>
-
+</div>
 <!--背景動画-->
 <video width="300" height="500"  muted playsinline id="bgvideo"></video>
 
+</div>
 <!--//元素材-->
 <canvas  width="300" height="1000" id="buffer"></canvas>
 
 <!--//buffer canvas uses this video to extract data-->
 <video width="300" height="500" id="video" muted playsinline src="./plane.mp4" ></video>
     <!--type='video/mp4;codecs="avc1.42E01E"'-->
-</div>
+
 
 
 
