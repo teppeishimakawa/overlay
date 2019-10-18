@@ -21,7 +21,7 @@
       #bgvideo
       {
         left:0px;
-        position:fixed;
+        position:block;
         z-index:1;
       }
 
@@ -35,7 +35,7 @@
 
 <div id="group">
 <!--Output canvas (combines mask with video)-->
-<canvas style="display:none" class="video__output " width="1280" height="720" id="output"></canvas>
+<canvas class="video__output " width="1280" height="720" id="output"></canvas>
 
 <!--背景動画-->
 <video width="1280" height="720"  muted playsinline id="bgvideo"></video>
