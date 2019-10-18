@@ -13,10 +13,10 @@ document.getElementById("buffer").style.display="none";
 document.getElementById("video").style.display="none";
 document.getElementById("output").style.width="300px";
 document.getElementById("output").style.height="500px";
-document.getElementById("output").style.top="0px";
+document.getElementById("output").style.top=10 + "px";
 document.getElementById("bgvideo").style.width="300px";
 document.getElementById("bgvideo").style.height="500px";
-document.getElementById("bgvideo").style.top="0px";
+document.getElementById("bgvideo").style.top=10 + "px";
 
 function draw() {
     buffer.drawImage(video, 0, 0);
