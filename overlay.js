@@ -39,7 +39,7 @@ function draw() {
     requestAnimationFrame(draw)
 }
 
-document.getElementById("video").play();
+
 
 
 const medias =
@@ -88,9 +88,11 @@ function errorCallback(err) {
 
 }
 
+document.getElementById("btn").addEventListener('click', function () {
+       document.getElementById("video").play();
+    });
+
 
 document.getElementById("bgvideo").play();
-
-
 draw();
 
