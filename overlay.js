@@ -1,14 +1,16 @@
 
 
-var width=window.innerWidth;
-var height=window.innerHeight;
+var width=300;
+var height=500;
+//var width=window.innerWidth;
+//var height=window.innerHeight;
 var buffer=document.getElementById("buffer").getContext('2d');
 
 document.getElementById("video").play();
 document.getElementById("bgvideo").play();
 
-//document.getElementById("buffer").style.display="none";
-//document.getElementById("video").style.display="none";
+document.getElementById("buffer").style.display="none";
+document.getElementById("video").style.display="none";
 document.getElementById("output").style.width="300px";
 document.getElementById("bgvideo").style.width="300px";
 document.getElementById("output").style.height="500px";
