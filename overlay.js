@@ -7,10 +7,12 @@ var buffer=document.getElementById("buffer").getContext('2d');
 document.getElementById("video").play();
 document.getElementById("bgvideo").play();
 
-document.getElementById("buffer").style.display="none";
-document.getElementById("video").style.display="none";
-document.getElementById("output").style.width="500px";
-document.getElementById("bgvideo").style.width="500px";
+//document.getElementById("buffer").style.display="none";
+//document.getElementById("video").style.display="none";
+document.getElementById("output").style.width="300px";
+document.getElementById("bgvideo").style.width="300px";
+document.getElementById("output").style.height="500px";
+document.getElementById("bgvideo").style.height="500px";
 
 function draw() {
     buffer.drawImage(video, 0, 0);
