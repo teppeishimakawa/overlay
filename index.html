@@ -35,16 +35,16 @@
 
 <div id="group">
 <!--Output canvas (combines mask with video)-->
-<canvas class="video__output " width="1280" height="720" id="output"></canvas>
+<canvas style="display:none" class="video__output " width="1280" height="720" id="output"></canvas>
 
 <!--背景動画-->
 <video width="1280" height="720"  muted playsinline id="bgvideo"></video>
 
 <!--//元素材-->
-<canvas  width="1280" height="1440" id="buffer"></canvas>
+<canvas style="display:none" width="1280" height="1440" id="buffer"></canvas>
 
 <!--//buffer canvas uses this video to extract data-->
-<video width="1280" height="720" id="video" muted playsinline  src="./plane.mp4" ></video>
+<video width="1280" height="720" id="video" muted playsinline style="display:none" src="./plane.mp4" ></video>
     <!--type='video/mp4;codecs="avc1.42E01E"'-->
 </div>
 
