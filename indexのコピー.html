@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+<style>
+
+      #group
+      {
+        left:0;
+        top:0;
+        position:relative;
+        z-index:1;
+      }
+      #ov
+      {
+        width: 850px;
+        height: 480px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index:2;
+      }
+      #bk
+      {
+        width: 300px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        margin: auto;
+        z-index:1;
+      }
+      #output
+      {
+
+        z-index:2;
+      }
+      #bgvideo
+      {
+
+        z-index:1;
+      }
+
+
+</style>
+
+ <title>overlay</title>
+</head>
+
+<body>
+
+<div id="group">
+
+<div id="ov">
+<!--overlay動画output-->
+<canvas class="video__output " width="850" height="480" id="output"></canvas>
+
+<!--背景動画。カメラ-->
+
+<div id="bk">
+<video width="300" height="500"  muted playsinline id="bgvideo"></video>
+</div>
+</div>
+
+</div>
+
+
+<!--//元素材--上下重ね動画-->
+<canvas  width="850" height="960" id="buffer"></canvas>
+
+<!--overlay動画-->
+<video width="850" height="480" id="video" muted playsinline src="./plane.mp4" ></video>
+    <!--type='video/mp4;codecs="avc1.42E01E"'-->
+
+
+
+
+<script type="text/javascript" src="./overlay.js"></script>
+
+</body>
+</html>

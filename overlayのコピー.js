@@ -5,6 +5,8 @@ var width=window.innerWidth;
 var height=window.innerHeight;
 var buffer=document.getElementById("buffer").getContext('2d');
 
+document.getElementById("video").play();
+document.getElementById("bgvideo").play();
 
 document.getElementById("buffer").style.display="none";
 document.getElementById("video").style.display="none";
@@ -41,8 +43,6 @@ function draw() {
 
 draw();
 
-document.getElementById("video").play();
-document.getElementById("bgvideo").play();
 
 
 const medias =
