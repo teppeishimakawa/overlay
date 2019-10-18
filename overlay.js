@@ -9,12 +9,10 @@ var buffer=document.getElementById("buffer").getContext('2d');
 document.getElementById("buffer").style.display="none";
 document.getElementById("video").style.display="none";
 
-document.getElementById("output").style.width="400px";
-document.getElementById("output").style.height="300px";
+
 document.getElementById("output").style.top=10 + "px";
 document.getElementById("output").style.zIndex=2;
-document.getElementById("bgvideo").style.width="400px";
-document.getElementById("bgvideo").style.height="300px";
+
 document.getElementById("bgvideo").style.top=10 + "px";
 document.getElementById("bgvideo").style.zIndex=1;
 
