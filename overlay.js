@@ -88,8 +88,9 @@ function errorCallback(err) {
 
 }
 
-document.getElementById("btn").addEventListener('click', function () {
-       document.getElementById("video").play();
+document.getElementById("btnn").addEventListener('click', function () {
+       //document.getElementById("video").play();
+       console.log("ok");
     });
 
 
