@@ -24,6 +24,17 @@
         left: 0;
         z-index:2;
       }
+      #bk
+      {
+        width: 300px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        margin: auto;
+        z-index:2;
+      }
       #output
       {
         left:0px;
@@ -53,11 +64,17 @@
 <div id="ov">
 <!--overlay動画output-->
 <canvas class="video__output " width="850" height="480" id="output"></canvas>
-</div>
+
 <!--背景動画。カメラ-->
+
+<div id="bk">
 <video width="300" height="500"  muted playsinline id="bgvideo"></video>
+</div>
+</div>
 
 </div>
+
+
 <!--//元素材--上下重ね動画-->
 <canvas  width="850" height="960" id="buffer"></canvas>
 
