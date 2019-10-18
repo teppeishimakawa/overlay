@@ -12,10 +12,11 @@ document.getElementById("video").style.display="none";
 document.getElementById("output").style.width="800px";
 document.getElementById("output").style.height="500px";
 document.getElementById("output").style.top=10 + "px";
+document.getElementById("output").style.zIndex=2;
 document.getElementById("bgvideo").style.width="800px";
 document.getElementById("bgvideo").style.height="500px";
 document.getElementById("bgvideo").style.top=10 + "px";
-
+document.getElementById("bgvideo").style.zIndex=1;
 
 function draw() {
     buffer.drawImage(video, 0, 0);
