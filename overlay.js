@@ -12,9 +12,11 @@ document.getElementById("bgvideo").play();
 document.getElementById("buffer").style.display="none";
 document.getElementById("video").style.display="none";
 document.getElementById("output").style.width="300px";
-document.getElementById("bgvideo").style.width="300px";
 document.getElementById("output").style.height="500px";
+document.getElementById("output").style.top="0px";
+document.getElementById("bgvideo").style.width="300px";
 document.getElementById("bgvideo").style.height="500px";
+document.getElementById("bgvideo").style.top="0px";
 
 function draw() {
     buffer.drawImage(video, 0, 0);
