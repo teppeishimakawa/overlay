@@ -10,12 +10,6 @@ document.getElementById("buffer").style.display="none";
 document.getElementById("video").style.display="none";
 
 
-document.getElementById("output").style.top=10 + "px";
-document.getElementById("output").style.zIndex=2;
-
-document.getElementById("bgvideo").style.top=10 + "px";
-document.getElementById("bgvideo").style.zIndex=1;
-
 function draw() {
     buffer.drawImage(video, 0, 0);
 
