@@ -1,7 +1,7 @@
 
 
-var width=300;
-var height=500;
+var width=850;
+var height=480;
 //var width=window.innerWidth;
 //var height=window.innerHeight;
 var buffer=document.getElementById("buffer").getContext('2d');

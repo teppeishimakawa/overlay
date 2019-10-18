@@ -14,8 +14,8 @@
       }
       #ov
       {
-        width: 300px;
-        height: 500px;
+        width: 850px;
+        height: 480px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -46,18 +46,19 @@
 <body>
 
 <div id="group">
-<!--Output canvas (combines mask with video)-->
+
 <div id="ov">
-<canvas class="video__output " width="300" height="500" id="output"></canvas>
+<!--overlay動画output-->
+<canvas class="video__output " width="850" height="480" id="output"></canvas>
 </div>
-<!--背景動画-->
+<!--背景動画。カメラ-->
 <video width="300" height="500"  muted playsinline id="bgvideo"></video>
 
 </div>
-<!--//元素材-->
-<canvas  width="300" height="1000" id="buffer"></canvas>
+<!--//元素材--上下重ね動画-->
+<canvas  width="850" height="960" id="buffer"></canvas>
 
-<!--//buffer canvas uses this video to extract data-->
+<!--overlay動画-->
 <video width="850" height="480" id="video" muted playsinline src="./plane.mp4" ></video>
     <!--type='video/mp4;codecs="avc1.42E01E"'-->
 
