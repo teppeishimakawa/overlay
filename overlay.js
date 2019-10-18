@@ -39,11 +39,7 @@ function draw() {
     requestAnimationFrame(draw)
 }
 
-
-draw();
-
 document.getElementById("video").play();
-document.getElementById("bgvideo").play();
 
 
 const medias =
@@ -91,4 +87,10 @@ function errorCallback(err) {
 {
 
 }
+
+
+document.getElementById("bgvideo").play();
+
+
+draw();
 
